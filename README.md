@@ -1,28 +1,28 @@
 ---
 titulo: Projeto final - Laboratório de Programação 2 (Web)
 descricao: Visão geral do projeto, integrantes, link do site publicado, do protótipo no Figma e da apresentação, além da organização do repositório.
-autores: Nome do integrante 1, Nome do integrante 2, Nome do integrante 3
+autores: Davi Salles, Bryan dos Reis, Lucas Souza
 versao: v1.0
-ultima_atualizacao: Dia/mês/ano
+ultima_atualizacao: 10/11/2026
 arquivos_relacionados: CHANGELOG.md, docs/uso-de-IA.md, docs/versoes/v1.0-final.md
 ---
 
-# [Nome do projeto]
+# Oráculo
 
-[Descrição em uma ou duas frases: qual problema o site resolve e para quem.]
+Um site feito pensando em introduzir a mitologia grega a um usuário que tem como intenção entender e desbravar sobre o assunto.
 
 ## Integrantes
 
 | Nome | Onde atuou no projeto? (Mínimo de 3 frentes diferentes para cada aluno) |
 |---|---|
-| [Nome completo] | [Ex.: Figma, estrutura HTML e documentação] |
-| [Nome completo] | [Ex.: estilos CSS, JS e responsividade] |
-| [Nome completo] | [Ex.: Atualização da documentação do github, interatividade em JavaScript e apresentação] |
+| Davi Salles | Figma, documentação e estilo CSS |
+| Bryan dos Reis | Java Script, responsividade e estrutura do HTML |
+| Lucas Souza | Estilo CSS e estrutura HTML |
 
 ## Links
 
 - **Site publicado (GitHub Pages):** [https://USUARIO.github.io/projeto-final-lp2/](https://USUARIO.github.io/projeto-final-lp2/)
-- **Protótipo no Figma:** [link]
+- **Protótipo no Figma:** https://www.figma.com/design/zQJk9el6k0yKi7WLGbaemU/WireFrame-FInalBoss?node-id=81-44&t=VJQtQJD6uuLrGzGL-1
 - **Apresentação:** [link dos slides]
 
 ## Estrutura do repositório
