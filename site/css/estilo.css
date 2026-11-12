@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    font-family: Syne;
+    min-height: 100vh;
+    background-color: #F3EFE6;
+
+    h1 {
+        color: #ffcc00;
+    }
+
+}
+
+.kumar-one-regular {
+    font-family: "Kumar One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.imgs-nav {
+    height: 45px;
+
+}
+
+.logo {
+    margin-top: 10px;
+    gap: 3px;
+    display: flex;
+    align-items: center;
+    height: 30px;
+    margin-bottom: 20px;
+
+    
+
+    img {
+        margin-top: 15px;
+    }
+
+    h1 {
+        font-size: 50px;
+        text-shadow: 5px 5px 2px black;
+        color: #ffffff;
+    }
+}
+
+.navbar {
+    background-color: #6E1E2E;
+    a {
+        text-decoration: none;
+    }
+    display: flex;
+    justify-content: space-evenly;
+    gap: 260px;
+    padding: 10px;
+    top: 0;
+    z-index: 1000;
+    max-height: 60px;
+    padding: 10px;
+
+}
+
+.atalhos-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 80px;
+    height: 38px;
+
+    position: sticky;
+
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    text-shadow: 2px 2px 2px black;
+    font-size: 18px;
+    padding: 8px;
+    transition: color 0.3s ease-in-out;
+
+    position: relative;
+    transition: color 0.5s ease-in-out, transform 0.3s ease-in-out;
+
+
+
+}
+
+.nav-link:hover {
+
+
+    color: #ffe699;
+    transform: scale(1.1);
+
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #F2A900;
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out;
+
+}
+
+.nav-link:hover::after {
+    width: 100%;
+
+}
