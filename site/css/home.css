@@ -1,19 +1,48 @@
-.hero{
+.hero {
+    position: relative;
     background-image: url(../assets/img/El_Olimpo_batalla_con_los_gigantes.jpg);
+    height: 95vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
-           
-            height: 95vh; 
+}
 
-           
-            background-position: center;
+.sombra {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.411);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-          
-            background-repeat: no-repeat;
+.text-hero {
 
-         
-            background-size: cover;
+    color: #D4A63A;
+    position: relative;
+    z-index: 3;
+}
 
-           
+.titulo-da-sessao {
+    display: flex;
+    justify-content: center;
+    font-size: 60px;
+    text-shadow: 8px 8px 8px black;
 
-            
+}
+
+.titulo-sessao2 {
+    color: #F3EFE6;
+}
+
+.subtitulo-sessao {
+
+    font-size: 20px;
+    color: #F3EFE6;
+    text-shadow: 8px 8px 8px black;
 }

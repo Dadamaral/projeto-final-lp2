@@ -29,7 +29,7 @@ body {
     height: 30px;
     margin-bottom: 20px;
 
-    
+
 
     img {
         margin-top: 15px;
@@ -44,9 +44,11 @@ body {
 
 .navbar {
     background-color: #6E1E2E;
+
     a {
         text-decoration: none;
     }
+
     display: flex;
     justify-content: space-evenly;
     gap: 260px;
@@ -108,4 +110,141 @@ body {
 .nav-link:hover::after {
     width: 100%;
 
+}
+
+.secao-cristais {
+    background-color: #f4efe6;
+    /* Tom creme do fundo */
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.cabecalho-secao {
+    background-color: #63202b;
+    /* Vinho da barra superior */
+    padding: 20px 0;
+    color: #e6a817;
+    /* Dourado do título */
+    font-size: 28px;
+}
+
+.carrossel-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 62px auto 30px;
+    padding: 0 20px;
+}
+
+.cristais-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    /* Espaço entre os cristais */
+}
+
+/* Formato de Cristal */
+.cristal {
+    position: relative;
+    width: 160px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+
+    /* Recorta o retângulo no formato de cristal */
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+
+    transition: transform 0.4s ease, filter 0.4s ease;
+    filter: brightness(0.75);
+    /* Deixa os laterais levemente mais escuros */
+}
+
+.cristal img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.cristal span {
+    position: relative;
+    z-index: 2;
+    color: #e6a817;
+    font-size: 26px;
+    font-weight: bold;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+    opacity: 0;
+    /* Esconde o texto nos cristais laterais */
+    transition: opacity 0.3s ease;
+}
+
+/* Cristal do Meio (Destaque) */
+.cristal.ativo {
+    transform: scale(1.25);
+    /* Aumenta o tamanho do cristal central */
+    filter: brightness(1);
+}
+
+.cristal.ativo span {
+    opacity: 1;
+    /* Mostra o texto apenas no cristal ativo */
+}
+
+.cristal.ativo:hover {
+
+    transform: scale(1.4);
+
+}
+
+
+.cristal:hover {
+    filter: brightness(1);
+    transform: scale(1.15);
+}
+
+/* Botões de Seta */
+.seta-btn {
+    background-color: #63202b;
+    color: white;
+    border: none;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background 0.3s;
+     transition:  transform 0.3s ease-in-out;
+
+
+}
+
+.seta-btn:hover {
+    background-color: #852b3a;
+     transform: scale(1.05);
+}
+
+/* Bolinhas inferiores */
+.indicadores {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #646e82;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.dot.ativo {
+    background-color: #63202b;
 }
