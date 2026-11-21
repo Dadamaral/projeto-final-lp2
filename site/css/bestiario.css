@@ -1,0 +1,40 @@
+body{
+    margin: 1%;
+}
+.hero{
+    img{
+        width: 100%;
+    }
+}
+.categoria-bestas{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 60px;
+
+    .card-bestas{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 270px;
+        height: 350px;
+        background-color: gray;
+        border-radius: 5%;
+        padding: 1%;
+        transition: transform 0.6 ease;
+        p{
+            text-align: center;
+            font-size: 14px;
+        }
+        img{
+            width: 70%;
+            height: 50%;
+            border-radius: 10%;
+        }
+    }
+    .card-bestas:hover{
+        transform: scale(1.10);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+}
