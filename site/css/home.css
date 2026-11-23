@@ -1,3 +1,9 @@
+
+html, body {
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+}
 .hero {
     position: relative;
     background-image: url(../assets/img/El_Olimpo_batalla_con_los_gigantes.jpg);
@@ -19,6 +25,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.sombra-origem{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.411);
+    z-index: 1;
 }
 
 .text-hero {
@@ -45,4 +60,712 @@
     font-size: 20px;
     color: #F3EFE6;
     text-shadow: 8px 8px 8px black;
+}
+
+.oculto {
+    display: none !important;
+}
+
+.secao-origem {
+    position: relative;
+    /* Referência para posicionar os deuses nos cantos */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #000;
+    color: #fff;
+    padding: 40px 20px;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    /* Ou a fonte limpa da sua referência */
+    background-image: url(../assets/img/fundo-estrelado.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#container-animacao {
+    width: 100%;
+    max-width: 1200px;
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.conteudo-central {
+    max-width: 850px;
+    text-align: center;
+    z-index: 5;
+    margin-bottom: 40px;
+    
+  
+    background-color: rgba(0, 0, 0, 0.26); /* 65% de opacidade */
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+
+.titulo-inicio {
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #e6a817; /* Dourado combinando com o tema do site */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+}
+
+
+.paragrafo-historia {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #e6e6e6;
+    margin-bottom: 22px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+/* Estilo base das imagens dos deuses */
+.deus-img {
+    position: absolute;
+    opacity: 0;
+    transform: scale(0.85);
+    transition: opacity 1s ease, transform 1s ease;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+.deus-img.visivel {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Posicionamento exato de cada deus conforme a imagem referência */
+.pos-gaia {
+    width: 165px;
+    left: 1%;
+    bottom: 10%;
+}
+
+.pos-tartaro {
+    width: 195px;
+    height: 145px;
+    object-fit: cover;
+    border-radius: 50%;
+    /* Deixa oval como na imagem */
+    left: 16%;
+    bottom: 1%;
+}
+
+.pos-eros {
+    width: 175px;
+    right: 19%;
+    bottom: 1%;
+}
+
+.pos-erebo {
+    width: 185px;
+    height: 185px;
+    object-fit: cover;
+    border-radius: 50%;
+    /* Deixa circular como na imagem */
+    right: 1%;
+    bottom: 10%;
+}
+
+/* Botão dourado idêntico ao "saber completo" */
+.btn-dourado {
+    background-color: #f4b400;
+    color: #000;
+    padding: 16px 34px;
+    border: none;
+    font-size: 17px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 25px;
+    transition: background 0.3s, transform 0.2s;
+    border-radius:20px;
+}
+
+.btn-dourado:hover {
+    background-color: #ffca28;
+    transform: scale(1.03);
+}
+
+/* Setinha para continuar entre os dois parágrafos */
+.seta-continuar {
+    background: transparent;
+    color: #f4b400;
+    border: 2px solid #f4b400;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 10px auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.seta-continuar:hover {
+    background: #f4b400;
+    color: #000;
+}
+
+/* Ajuste para telas menores (celulares) para as imagens não cobrirem o texto */
+@media (max-width: 850px) {
+    .deus-img {
+        position: static;
+        width: 120px;
+        height: 120px;
+        margin: 10px;
+    }
+}
+
+.saibamais {
+    background-color: #f4efe6; /* Fundo creme do site */
+    margin-bottom: 0;
+}
+
+/* Faixa vinho do topo com a imagem de fundo */
+.titulo-saibamais {
+    background-image: url('../assets/img/tituloSaibamaisHome.png');
+    height: 60vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    /* Centraliza o texto "Saiba Mais" dentro da faixa vinho */
+    display: flex;
+    align-items: center;
+    padding-left: 8%; /* Ajuste a distância da esquerda para alinhar com o Figma */
+}
+
+/* Estilo do H1 "Saiba Mais" */
+.titulo-saibamais h1 {
+    color: #e6a817; /* Dourado do seu tema */
+    font-size: 48px;
+    font-family: 'kumor-one-regular', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Container dos vídeos */
+.conteudo-saibamais {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px 60px 20px;
+    
+    /* Puxa a seção inteira para cima, fazendo cobrir a faixa vermelha */
+    position: relative;
+    margin-top: -90px; /* Ajuste este valor (ex: -80px, -120px) conforme preferir */
+    z-index: 10;        /* Garante que o card fique por cima do fundo vermelho */
+}
+
+.card-video {
+    display: flex;
+    align-items: end;
+    gap: 50px;
+    margin: 50px 0;
+}
+
+/* Caixa do vídeo (Iframe) */
+.video-container {
+    flex: 1;
+    width: 100%;
+    max-width: 480px;
+    height: 270px;
+    background-color: #000;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Descrição ao lado */
+.descricao-video {
+    flex: 1;
+}
+
+.descricao-video h3 {
+    font-size: 26px;
+    color: #000000; /* Vinho escuro */
+    margin-bottom: 15px;
+    font-family: 'kumor-one-regular', sans-serif;
+}
+
+.descricao-video p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+/* Linha divisória entre os vídeos */
+.linha-divisoria {
+    border: none;
+    height: 1px;
+    background-color: #d1c2a5;
+    margin: 40px 0;
+}
+.card-video:first-child {
+    margin-top: -80px; /* Puxa só o primeiro para cima da faixa vermelha */
+    position: relative;
+    z-index: 10;
+}
+
+.card-deus {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    height: 380px;
+    padding: 0 10%;
+    overflow: hidden;
+}
+
+.fundo-vinho {
+    background-color: #581823;
+    color: #fff;
+}
+
+.fundo-creme {
+    background-color: #f4efe6;
+    color: #333;
+}
+
+.detalhe-amarelo {
+    position: absolute;
+    left: -60px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px;
+    height: 280px;
+    background: linear-gradient(135deg, #f3b218, #d49305);
+    border-radius: 30% 70% 70% 30% / 50% 30% 70% 50%;
+    opacity: 0.9;
+    box-shadow: 0 0 20px rgba(230, 168, 23, 0.4);
+    z-index: 1;
+}
+
+.info-deus {
+    z-index: 2;
+    max-width: 450px;
+    justify-self: center;
+    text-align: center;
+}
+
+.nome-deus {
+    font-size: 42px;
+    color: #e6a817;
+    margin-bottom: 15px;
+    font-family: 'kumor-one-regular', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.desc-deus {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.imagem-deus {
+    z-index: 2;
+    justify-self: center;
+}
+
+.imagem-deus img {
+    width: 230px !important;
+    height: 230px !important;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 3px solid #e6a817;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn-vinho {
+    display: inline-block;
+    background-color: #581823;
+    color: #e6a817;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, background 0.2s;
+}
+
+.btn-vinho:hover {
+    background-color: #72202e;
+    transform: scale(1.05);
+}
+
+.titulo-deuses {
+    width: 100%;
+    background-color: #581823;
+    text-align: center;
+    padding: 35px 0;
+}
+
+.titulo-deuses h2 {
+    color: #e6a817;
+    font-size: 38px;
+    font-family: 'kumor-one-regular', sans-serif;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.secao-gloriosos-herois {
+    width: 100%;
+    position: relative;
+    background-color: #f4efe6;
+    padding-bottom: 80px; /* Dá respiro no final da seção */
+}
+
+.faixa-topo-herois {
+    width: 100%;
+    height: 450px;
+    background-image: url('../assets/img/fundoHeroisHome.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 50px;
+    padding-left: 8%;
+}
+
+.titulo-gloriosos {
+    color: #e6a817;
+    font-size: 42px;
+    font-family: 'kumor-one-regular', sans-serif;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    margin-bottom: 10px;
+}
+
+.faixa-topo-herois::after {
+    content: "";
+    display: block;
+    width: 180px;
+    height: 2px;
+    background-color: #e6a817;
+    box-shadow: 0 0 5px rgba(230, 168, 23, 0.5);
+}
+
+.pergaminho-container {
+    width: 88%;
+    max-width: 1250px;
+    margin: -140px auto 0 auto; /* Ajustado para sobrepor perfeitamente a faixa */
+    background-image: url('../assets/img/PapelTexto.png');
+    background-position: center;
+    background-repeat: repeat-y; /* Permite que a textura estique verticalmente sem cortar */
+    background-size: 100% auto;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    padding: 60px 40px;
+    position: relative;
+    z-index: 5;
+}
+
+.grid-cards-herois {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    justify-items: center;
+}
+
+.card-heroi {
+    position: relative;
+    width: 240px;
+    background-color: #161616;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 25px;
+    border: 2px solid #282828;
+}
+
+.moldura-img {
+    width: 205px;
+    height: 205px;
+    background-color: #000;
+    border-radius: 12px;
+    margin-top: 18px;
+    overflow: hidden;
+    border: 2px solid #3d3d3d;
+}
+
+.moldura-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.faixa-subtitulo {
+    width: 100%;
+    background-color: #581823;
+    color: #e6a817;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    padding: 9px 0;
+    margin: 18px 0;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.nome-heroi {
+    color: #fff;
+    font-size: 22px;
+    font-family: 'kumor-one-regular', sans-serif;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.card-heroi.primeiro-card::before {
+    content: "";
+    position: absolute;
+    left: -22px;
+    top: 225px;
+    width: 35px;
+    height: 24px;
+    background-color: #581823;
+    clip-path: polygon(100% 0, 0 50%, 100% 100%);
+    z-index: 10;
+    box-shadow: -2px 2px 5px rgba(0,0,0,0.4);
+}
+
+@media (max-width: 1100px) {
+    .grid-cards-herois {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .grid-cards-herois {
+        grid-template-columns: 1fr;
+    }
+}
+
+.secao-cultura-pop {
+    width: 100%;
+    height: 750px;
+    background-image: url('../assets/img/fundoPopHome.png');
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    padding-left: 6%;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.cultura-conteudo {
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.cultura-titulo {
+    color: #d48817;
+    font-size: 40px;
+    font-family: 'kumor-one-regular', sans-serif;
+    margin: 0;
+}
+
+.cultura-titulo::after {
+    content: "";
+    display: block;
+    width: 240px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #d48817, transparent);
+    margin-top: 8px;
+}
+
+.cultura-descricao {
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    margin: 45px 0 40px 0;
+    font-family: 'kumor-one-regular', sans-serif;
+}
+
+.cultura-descricao span {
+    color: #d48817;
+}
+
+.btn-vamos-conhecer {
+    align-self: center;
+    display: inline-block;
+    background-color: #c27c19;
+    color: #ffffff;
+    font-size: 18px;
+    font-family: 'kumor-one-regular', sans-serif;
+    padding: 12px 32px;
+    text-decoration: none;
+    transform: skewX(20deg);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-vamos-conhecer span {
+    display: inline-block;
+    transform: skewX(-20deg);
+}
+
+.btn-vamos-conhecer:hover {
+    background-color: #e69d28;
+    transform: skewX(20deg) scale(1.05);
+}
+
+.site-footer {
+    width: 100%;
+    background-color: #000000;
+    color: #ffffff;
+    padding-top: 40px;
+    padding-bottom: 25px;
+    margin-top: -5px;
+    position: relative;
+    z-index: 3;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 6%;
+}
+
+.footer-logo-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo {
+    font-size: 38px;
+    font-family: 'kumor-one-regular', sans-serif;
+    color: #ffffff;
+    margin: 0;
+    line-height: 1;
+}
+
+.letra-omega {
+    color: #e6a817;
+    margin-right: 4px;
+}
+
+.footer-sub {
+    font-size: 17px;
+    font-family: 'kumor-one-regular', sans-serif;
+    color: #ffffff;
+    margin-top: 8px;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.footer-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'kumor-one-regular', sans-serif;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: #e6a817;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.social-icon {
+    width: 46px;
+    height: 46px;
+    border: 2px solid #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.icon-x {
+    border-radius: 8px;
+}
+
+.icon-insta {
+    border-radius: 50%;
+}
+
+.social-icon img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.social-icon:hover {
+    border-color: #e6a817;
+    transform: scale(1.08);
+}
+
+.footer-bottom {
+    max-width: 850px;
+    margin: 35px auto 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.footer-linha {
+    border: none;
+    height: 1px;
+    background-color: #ffffff;
+    opacity: 0.7;
+    margin-bottom: 12px;
+}
+
+.footer-creditos {
+    font-size: 11px;
+    color: #ffffff;
+    font-family: 'kumor-one-regular', sans-serif;
+    letter-spacing: 0.3px;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .footer-nav {
+        align-items: center;
+    }
 }

@@ -113,8 +113,11 @@ body {
 }
 
 .secao-cristais {
-    background-color: #f4efe6;
+    background-image: url(../assets/img/FundoSessoes.png);
     /* Tom creme do fundo */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     text-align: center;
     padding-bottom: 40px;
 }
@@ -218,14 +221,14 @@ body {
     font-size: 24px;
     cursor: pointer;
     transition: background 0.3s;
-     transition:  transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 
 
 }
 
 .seta-btn:hover {
     background-color: #852b3a;
-     transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 /* Bolinhas inferiores */
